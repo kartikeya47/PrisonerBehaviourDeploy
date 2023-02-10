@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Predict the Behaviour</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="{{ url_for('static', filename = 'assets/css/style.css')}}" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+  <h1 style="margin-top:2.1%;margin-left:13%" class="font-semibold text-black leading-relaxed">PMS</h1>
+
+<center>
+<h1 style="margin-bottom:4%;" class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+<form style="margin-top:4%;" action="/submit" method="post">
+        Enter the Details about Prisoner
+        </h1>
+        <label style="margin-right:0.5%;" class="text-sm leading-5 font-medium text-gray-700">Nature of the Prisoner</label> 
+        <select name="nature" class="bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base form-input">
+          <option value="Good">Good</option>
+          <option value="Average">Average</option>
+          <option value="Worst">Worst</option>
+        </select>  
+        <br><br>
+        <label style="margin-right:0.5%;" class="text-sm leading-5 font-medium text-gray-700">Does the Prisoner fight with other inmates</label> 
+        <select name="fight" class="bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base form-input">
+          <option value="Fights">Fights</option>
+          <option value="Not Fights">Not Fights</option>
+        </select> 
+        <br><br>
+        <label style="margin-right:0.5%;" class="text-sm leading-5 font-medium text-gray-700">Does the Prisoner cook food</label> 
+        <select name="cook" class="bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base form-input">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select> 
+        <br><br>
+        <label style="margin-right:0.5%;" class="text-sm leading-5 font-medium text-gray-700">Does the Prisoner clean toilets</label> 
+        <select name="clean" class="bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base form-input">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>   
+        <br><br>
+        <button type="submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg">Predict</button>
+</form>
+</center>
+
+  <script src="{{ url_for('static', filename = 'assets/js/main.js')}}"></script>
+
+
+  <footer class="text-gray-700 body-font" style=" position:fixed; left: 0; bottom: 0;width: 100%; text-align: center;">
+    <div class="bg-gray-200">
+      <div
+        class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col"
+      >
+      <a
+          class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+            ></path>
+          </svg>
+          <span class="ml-3 text-xl">Prison Management System</span>
+        </a>
+        <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
+          © 2022 — Akshat , Kartikeya, Pratyush, Priadarshini, Rishit, Shruti
+        </p>
+        <span
+          class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+        >
+          <a class="text-gray-500"> Made with ❤️ </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+
+</body>
+
+</html>
